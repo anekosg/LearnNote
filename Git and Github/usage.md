@@ -57,4 +57,5 @@ git config --global user.email "220......@qq.com" //设置github 提交用户
 git init //初始化git 库
 git remote add origin https://github.com/anekosg/FrontInterview.git   //更新git库连接
 git pull -u origin master 使用pull获取库,提交代码使用push；
+git pull //以后只用pull 拉取就好
 ```
