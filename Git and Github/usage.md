@@ -3,6 +3,12 @@
 #### 本地Git同步至Github
 
 > 在VS Code中使用 
+> 需要在本地首先配置全局git 
+```
+git -l 查看全局配置
+git config --global user.name "an..."
+git config --global user.email "220......@qq.com" //设置github 提交用户
+```
 
 ![1571914061991](./../images/1571914061991.png)
 
