@@ -153,7 +153,20 @@ ES6方式
 1. import 模块名称 from '模块标识符'    ，import '表示路径'
 2. import {name，name2} from '模块标识符'
 ```
+###### ES6新增 const与let 
+```
+在ES6之前并没有js 常量的说法，同时基于var会存在 声明提前的问题
+let te ='let变量声明';
+const te='常量声明'  // 变量名也不能重复，并且const只支持添加，不支持修改；
+var temp ='hello'
+function fun(){
+  console.log(temp);
+  var temp ='这个声明会提前，并且覆盖第一个声明，同时声明 没有值'
+  let te ='let变量第二次声明,会编译 报错； let不支持重复声明，并且不会声明不会提前'; 
+}
+fun(); //undefined
 
+```
 ## Git 与 Github 的使用
 
 #### 本地Git同步至Github
