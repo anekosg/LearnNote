@@ -33,7 +33,7 @@ root
 
    - 一般打包
      - 在项目根目录命令行中运行 ```webpack src/main.js -o dist/bundle.js```  将打包好的文件放在指定目录； 其中 -o 是webpack新版本的写法；
-     - 运行```cnpm i  webpack-cli -g-s-d``` 安装webpack运行时才可以执行；
+     - 运行```npm i  webpack-cli -g-s-d``` 安装webpack运行时才可以执行；
 
    - 推荐打包，自动捕获更新打包
 
