@@ -69,6 +69,8 @@ root
                  { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] },
                //  { test: /\.(png|jpg|gif)$/, use: 'url-loader' }, //处理css路径
                  { test: /\.(png|jpg|gif)$/, use: 'url-loader?limit=43960' }, //处理指定大于指定字节的图片进行base64编码；
+                 {test: require.resolv('jquery'),loader: 'expose-loader?$'
+}
              ]
          },
          resolve:{
@@ -79,8 +81,8 @@ root
      };
      ```
 
-     2. 使用``` npm i webpack-dev-server -s-d``` 插件捕获代码更新 来实现代码实时打包编译；
-     3. 使用 `npm run dev`命令打包时，需要在`package.json `文件 `script` 节点下新增指令；其中`webpack-dev-server`会将打包好的Bundle.js文件放到内存中，不会输出到dist目录下；所以访问时需要更新index.html 的script 标签手动链接```../bundle.js```
+     1. 使用``` npm i webpack-dev-server -s-d``` 插件捕获代码更新 来实现代码实时打包编译；
+     2. 使用 `npm run dev`命令打包时，需要在`package.json `文件 `script` 节点下新增指令；其中`webpack-dev-server`会将打包好的Bundle.js文件放到内存中，不会输出到dist目录下；所以访问时需要更新index.html 的script 标签手动链接```../bundle.js```
 
      ```
      {
@@ -114,7 +116,7 @@ root
      
      ```
 
-     4. 使用插件````npm i html-webpack-plugin -s-d```` 设置启动页，并且自动链接script标签； 并且需要修改webpack.config.js配置文件；（配置文件已加入）
+     1. 使用插件````npm i html-webpack-plugin -s-d```` 设置启动页，并且自动链接script标签； 并且需要修改webpack.config.js配置文件；（配置文件已加入）
 ##### 项目各种文件类型打包
 
 ###### CSS文件
@@ -126,6 +128,12 @@ root
    3. `npm i url-loader file-loader -s-d` css路径
    4. ```npm i less-loader less -s-d``` less文件
 3. 修改`webpack.config.js`这个配置文件;(配置文件已加入)
+
+###### 第三方类库
+1. Jquery
+   1. 首先安装 loader 拓展，ES6 Import导入用的是闭包，所以无法调用全局&对象，需要手动添```npm i expose-loader -D ```
+   2. 同时css 基本上都依赖 url-loader，需要加载安装并加载
+   3. 修改配置文件（已经加入）
 
 
 
