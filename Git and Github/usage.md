@@ -1,4 +1,4 @@
-## Git 与 Github 的使用--
+## Git 与 Github 的使用
 
 #### 本地Git同步至Github
 
