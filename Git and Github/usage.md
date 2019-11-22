@@ -1,9 +1,7 @@
 ## Git 与 Github 的使用
-
 #### 本地Git同步至Github
-
-> 在VS Code中使用 
-> 需要在本地首先配置全局git 
+> 在VS Code中使用
+> 需要在本地首先配置全局git
 ```
 git -l 查看全局配置
 git config --global user.name "an..."
