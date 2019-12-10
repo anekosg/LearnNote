@@ -1,5 +1,7 @@
 ## Git 与 Github 的使用
+
 #### 本地Git同步至Github
+
 > 在VS Code中使用
 > 需要在本地首先配置全局git
 ```
@@ -46,6 +48,7 @@ git config --global user.email "220......@qq.com" //设置github 提交用户
 
    3. 其中 3,4,8 属于日常提交
 #### Github代码库clone至本地
+
 1. 首先登录Github账号，创建库
 > 其中.gitignore(排除指定文件或者文件夹版本管理),README(description)和LICENSE(开源协议)等根据需要自行选择；
 ![1572346933](./../images/1572346933.jpg)

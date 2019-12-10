@@ -1,6 +1,19 @@
 [TOC]
 
 ## Vue 和 Webpack 使用指南
+> Vue分为
+1. 运行时（@vue/cli）
+```
+全局安装 npm install -g @vue/cli
+当调用Vue运行时如果出现拒绝访问时，管理员打开PowerShell 键入 set-ExecutionPolicy RemoteSigned 并选择 Y ；确认即可
+```
+2. 普通安装包 npm install -s-d vue
+#### Vue加载至项目中
+1. 安装vue包
+2. 安装vue-loader,以及vue-template-compiler
+3. 安装其他 一堆loader
+4. 按需引入 babel-plugin-component
+
 #### 项目创建
 ##### 项目根目录
 ![](./../images/1571825414092.png)
@@ -32,7 +45,7 @@ root
 5. 打包 文件
 
    - 一般打包
-     - 在项目根目录命令行中运行 ```webpack src/main.js -o dist/bundle.js```  将打包好的文件放在指定目录； 其中 -o 是webpack新版本的写法；
+     - 在项目根目录命令行中运行 ```webpack src/main.js -ocls dist/bundle.js```  将打包好的文件放在指定目录； 其中 -o 是webpack新版本的写法；
      - 运行```npm i  webpack-cli -g-s-d``` 安装webpack运行时才可以执行；
 
    - 推荐打包，自动捕获更新打包
@@ -70,7 +83,8 @@ root
                //  { test: /\.(png|jpg|gif)$/, use: 'url-loader' }, //处理css路径
                  { test: /\.(png|jpg|gif)$/, use: 'url-loader?limit=43960' }, //处理指定大于指定字节的图片进行base64编码；
                  {test: require.resolv('jquery'),loader: 'expose-loader?$'
-}
+},
+  { test: /\.vue$/, use: 'vue-loader' } // 处理 .vue 文件的 loader
              ]
          },
          resolve:{
