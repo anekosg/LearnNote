@@ -8,7 +8,12 @@ sudo apt install vsftpd
 ```
 sudo vim /etc/vsftpd.conf
 一些设置：
-local_root=/home/ftpuser  //加入ftpuser目录
+//加入ftpuser目录
+local_root=/home/ftpuser  
+//配置 20任意端口范围（必须大于1024）
+pasv_min_port=10000
+pasv_max_port=10050 
+
 listen=NO
 listen_ipv6=YES
 anonymous_enable=NO
@@ -34,11 +39,14 @@ utf8_filesystem=YES
 
 加入创建的用户
 sudo vim /etc/vsftpd.chroot_list # 加入创建的用户 ftpuser
+
+更新ftp 服务
+sudo service vsftpd restart
 ```
 4. 在home下创建用户文件夹,并更新权限
 ```
 sudo mdkir /home/ftpuser
-sudo chmod -R 777 /home/ftpfile 
+sudo chmod -R 777 /home/ftpuser 
 ```
 5. 添加ftp用户
 ```

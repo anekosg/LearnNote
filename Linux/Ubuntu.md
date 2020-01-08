@@ -36,3 +36,11 @@ i   进入编辑模式
 :qw 保存并退出
 :q! 强制退出，不保存更改
 ```
+##### ufw防火墙使用
+```
+sudo ufw enable 开启防火墙
+sudo ufw status 查看状态和存在的规则
+sudo ufw allow 22/tcp 开启规则（一定要使用，要不然ssh连不上服务器了）
+sudo ufw allow 10000:12000/tcp  开启连续规则
+sudo ufw delete allow 10000:12000/tcp  删除连续规则
+```
