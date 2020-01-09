@@ -39,9 +39,6 @@ utf8_filesystem=YES
 
 加入创建的用户
 sudo vim /etc/vsftpd.chroot_list # 加入创建的用户 ftpuser
-
-更新ftp 服务
-sudo service vsftpd restart
 ```
 4. 在home下创建用户文件夹,并更新权限
 ```
@@ -55,5 +52,5 @@ sudo passwd ftpuser 输入密码
 ```
 6. 重启vsftpd 服务
 ```
-sudo service vsftpd
+sudo service vsftpd restart
 ```
