@@ -54,3 +54,8 @@ sudo passwd ftpuser 输入密码
 ```
 sudo service vsftpd restart
 ```
+7. 开启防火墙端口
+```
+sudo ufw allow 21/tcp
+sudo ufw allow 10000:10050/tcp
+```
