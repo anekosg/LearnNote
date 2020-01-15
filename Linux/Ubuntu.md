@@ -59,3 +59,7 @@ dpkg -i xxx.deb  //i安装
 ```
 sudo apt install -f pack  //f修复安装包的依赖；
 ```
+##### 系统工具
+```
+netstat -an|grep 3306  //指定端口是否开启
+```

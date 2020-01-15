@@ -50,12 +50,13 @@ sudo chmod -R 777 /home/ftpuser
 sudo useradd -d /home/ftpfile  ftpuser
 sudo passwd ftpuser 输入密码
 ```
-6. 重启vsftpd 服务
-```
-sudo service vsftpd restart
-```
-7. 开启防火墙端口
+6. 开启防火墙端口
 ```
 sudo ufw allow 21/tcp
 sudo ufw allow 10000:10050/tcp
 ```
+7. 重启vsftpd 服务
+```
+sudo service vsftpd restart
+```
+
