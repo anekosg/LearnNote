@@ -31,6 +31,10 @@ chown -R -v root:mail test6     //root拥有者,mail群组 test6文件或文件�
 --添加
 sudo useradd -d /home/ftpfile  ftpuser   // -d 指定用户的根目录（登录显示的目录）ftpuser 用户名
 sudo passwd ftpuser //设置用户的密码
+--查看 当前所有用户
+cat /etc/passwd
+--修改 用户
+sudo usermod
 ```
 ##### vim使用
 ```
@@ -62,4 +66,6 @@ sudo apt install -f pack  //f修复安装包的依赖；
 ##### 系统工具
 ```
 netstat -an|grep 3306  //指定端口是否开启
+sudo netstat -nltp  //查看所有开发监听的端口 不加sudo 显示不全
+sudo lsof -i -P -n | grep LISTEN  // 也可以查看 服务接口
 ```
