@@ -9,7 +9,11 @@ find  -type f  -name "*ftp.conf*"   //-type 限制类型 f 文件类型,-name �
 ##### 文件夹使用
 ```
 mkdir dir 添加文件夹
+删除
 rm -r * 删除文件和文件夹
+移动
+cp -r venv ../PythonProject  //-r 递归
+
 ```
 ##### 权限
 ```
